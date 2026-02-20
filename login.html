@@ -4,9 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>payoo | login</title>
+    <title>Payoo | Login</title>
     <link rel="shortcut icon" href="assets/logo.png" type="image/x-icon">
-    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="./styles/style.css">
+    <script src="./scripts/login.js" defer></script>
 
     <!-- tailwind CSS & daisy UI Link -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
@@ -24,8 +25,26 @@
 
 </head>
 
-<body>
-    <h1 class="text-7xl font-bold text-center text-red-500">Payoo Money Transition App</h1>
+<body class="bg-base-200 min-h-screen max-w-md mx-auto">
+
+    <div id="logo_section" class="w-[250px] mx-auto pt-52">
+        <img src="./assets/Logo-full.png" alt="#">
+    </div>
+
+    <div id="form_section" class="pt-8">
+        <div class="card bg-base-100 w-full max-w-sm shadow mx-auto">
+            <div class="card-body">
+                <fieldset class="fieldset">
+                    <label class="label text-neutral font-bold">Mobile Number</label>
+                    <input id="login_Input" type="text" minlength="11" maxlength="11" class="input rounded-full bg-base-200 mt-1" placeholder="Enter your number" />
+                    <label class="label text-neutral font-bold mt-3">4 Digit Pin</label>
+                    <input id="login_pin" type="password" minlength="4" maxlength="4" class="input rounded-full bg-base-200 mt-1" placeholder="Enter 4 Digit Pin" />
+                    <button id="login_btn" class="btn btn-neutral mt-4 bg-primary rounded-full">Login</button>
+                </fieldset>
+            </div>
+        </div>
+    </div>
+
 </body>
 
 </html>
