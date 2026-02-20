@@ -9,7 +9,7 @@ document.getElementById("login_btn").addEventListener("click", function () {
 
   if (numberInput === "01585735520" && loginPin === "1234") {
     alert("Login Success");
-    window.location.assign("/home.html");
+    window.location.assign("./home.html");
   } else {
     alert("Login Failed");
     return;
