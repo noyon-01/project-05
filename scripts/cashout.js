@@ -6,7 +6,7 @@ document.getElementById("cashout_btn").addEventListener("click", function () {
   }
   const cashoutAmount = getValueFormInput("cashout_Input_amount");
   const currentBalance = getBalance();
-  
+
   const newBalance = currentBalance - Number(cashoutAmount);
   if (newBalance < 0) {
     alert("Invalid Amount");
@@ -17,6 +17,17 @@ document.getElementById("cashout_btn").addEventListener("click", function () {
   if (cashoutPin === "1234") {
     alert("Cashout is Successfully Done.");
     setBalance(newBalance);
+
+    // !Transaction Section Starts Here! //
+    const history = document.getElementById("transaction_history_container");
+    const newHistory = document.createElement("div");
+    newHistory.innerHTML = `
+    <div id="transactions_card" class="p-5 bg-base-100 rounded-2xl shadow">
+                <h1 class="text-2xl font-bold mb-2">Cashout</h1>
+                <p>Cashout ${cashoutAmount} Taka Form Agent No: ${cashoutNumber}, on ${new Date()}</p>
+    </div>`;
+    history.appendChild(newHistory);
+    // !Transaction Section Ends Here! //
   } else {
     alert("Invalid Pin Number.");
     return;

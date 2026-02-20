@@ -54,11 +54,11 @@
 
     <section class="btns w-11/12 mx-auto pt-6">
         <div class="grid grid-cols-3 gap-4">
-            <button class="btn btn-primary btn-soft flex-col h-full py-3 px-3 rounded-2xl">
+            <button onclick="showOnly('add_money')" class="btn btn-primary btn-soft flex-col h-full py-3 px-3 rounded-2xl">
                 <img src="./assets/opt-1.png" alt="">
                 <p>Add Money</p>
             </button>
-            <button class="btn btn-primary btn-soft flex-col h-full py-3 px-3 rounded-2xl">
+            <button onclick="showOnly('cashout')" class="btn btn-primary btn-soft flex-col h-full py-3 px-3 rounded-2xl">
                 <img src="./assets/opt-2.png" alt="">
                 <p>Cashout</p>
             </button>
@@ -74,14 +74,14 @@
                 <img src="./assets/opt-5.png" alt="">
                 <p>Pay Bill</p>
             </button>
-            <button class="btn btn-primary btn-soft flex-col h-full py-3 px-3 rounded-2xl">
+            <button onclick="showOnly('transactions')" class="btn btn-primary btn-soft flex-col h-full py-3 px-3 rounded-2xl">
                 <img src="./assets/opt-6.png" alt="">
                 <p>Transactions</p>
             </button>
         </div>
     </section>
 
-    <div class="cashout_form_section w-11/12 mx-auto mt-6 hidden">
+    <div id="cashout" class="w-11/12 mx-auto mt-6 hidden">
         <h2 class="text-2xl font-bold">Cash Out</h2>
         <div id="form_section" class="pt-5">
             <div class="card bg-base-100 w-full max-w-lg shadow mx-auto rounded-3xl">
@@ -104,7 +104,7 @@
         </div>
     </div>
 
-    <div class="add_money_form_section w-11/12 mx-auto mt-6 mb-10">
+    <div id="add_money" class="w-11/12 mx-auto mt-6 mb-10">
         <h2 class="text-2xl font-bold">Add Money</h2>
         <div id="form_section" class="pt-5">
             <div class="card bg-base-100 w-full max-w-lg shadow mx-auto rounded-3xl">
@@ -132,6 +132,12 @@
                     </fieldset>
                 </div>
             </div>
+        </div>
+    </div>
+
+    <div id="transactions" class="w-11/12 mx-auto hidden">
+        <h2 class="text-2xl font-bold mb-5">Transactions</h2>
+        <div id="transaction_history_container" class="space-y-5 mb-10">
         </div>
     </div>
 
