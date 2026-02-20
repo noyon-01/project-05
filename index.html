@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Payoo | Login</title>
     <link rel="shortcut icon" href="assets/logo.png" type="image/x-icon">
-    <!-- <link rel="stylesheet" href="./styles/style.css"> -->
+    <link rel="stylesheet" href="./styles/style.css">
+    <script src="./scripts/login.js" defer></script>
 
     <!-- tailwind CSS & daisy UI Link -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
@@ -35,16 +36,17 @@
             <div class="card-body">
                 <fieldset class="fieldset">
                     <label class="label text-neutral font-bold">Mobile Number</label>
-                    <input id="login_Input" type="text" minlength="11" maxlength="11" class="input rounded-full bg-base-200 mt-1" placeholder="Enter your number" />
+                    <input id="login_Input" type="text" minlength="11" maxlength="11"
+                        class="input rounded-full bg-base-200 mt-1" placeholder="Enter your number" />
                     <label class="label text-neutral font-bold mt-3">4 Digit Pin</label>
-                    <input id="login_pin" type="password" minlength="4" maxlength="4" class="input rounded-full bg-base-200 mt-1" placeholder="Enter 4 Digit Pin" />
+                    <input id="login_pin" type="password" minlength="4" maxlength="4"
+                        class="input rounded-full bg-base-200 mt-1" placeholder="Enter 4 Digit Pin" />
                     <button id="login_btn" class="btn btn-neutral mt-4 bg-primary rounded-full">Login</button>
                 </fieldset>
             </div>
         </div>
     </div>
 
-    <script src="./scripts/login.js"></script>
 </body>
 
 </html>

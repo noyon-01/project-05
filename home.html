@@ -6,7 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Payoo | Home</title>
     <link rel="shortcut icon" href="assets/logo.png" type="image/x-icon">
-    <!-- <link rel="stylesheet" href="styles/style.css"> -->
+    <link rel="stylesheet" href="styles/style.css">
+    <script src="./scripts/cashout.js" defer></script>
+    <script src="./scripts/machine.js" defer></script>
+    <script src="./scripts/addmoney.js" defer></script>
 
     <!-- tailwind CSS & daisy UI Link -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
@@ -51,11 +54,13 @@
 
     <section class="btns w-11/12 mx-auto pt-6">
         <div class="grid grid-cols-3 gap-4">
-            <button onclick="showOnly('add_money')" class="btn btn-primary btn-soft flex-col h-full py-3 px-3 rounded-2xl">
+            <button onclick="showOnly('add_money')"
+                class="btn btn-primary btn-soft flex-col h-full py-3 px-3 rounded-2xl">
                 <img src="./assets/opt-1.png" alt="">
                 <p>Add Money</p>
             </button>
-            <button onclick="showOnly('cashout')" class="btn btn-primary btn-soft flex-col h-full py-3 px-3 rounded-2xl">
+            <button onclick="showOnly('cashout')"
+                class="btn btn-primary btn-soft flex-col h-full py-3 px-3 rounded-2xl">
                 <img src="./assets/opt-2.png" alt="">
                 <p>Cashout</p>
             </button>
@@ -71,7 +76,8 @@
                 <img src="./assets/opt-5.png" alt="">
                 <p>Pay Bill</p>
             </button>
-            <button onclick="showOnly('transactions')" class="btn btn-primary btn-soft flex-col h-full py-3 px-3 rounded-2xl">
+            <button onclick="showOnly('transactions')"
+                class="btn btn-primary btn-soft flex-col h-full py-3 px-3 rounded-2xl">
                 <img src="./assets/opt-6.png" alt="">
                 <p>Transactions</p>
             </button>
@@ -124,7 +130,8 @@
                         <label class="label text-neutral font-bold mt-3">Pin Number</label>
                         <input id="add_money_pin" type="password" class="input rounded-full bg-base-200 mt-1 w-full"
                             placeholder="Enter 4 digit pin number" />
-                        <button id="add_money_btn" class="btn btn-neutral mt-4 bg-primary rounded-full">Add Money</button>
+                        <button id="add_money_btn" class="btn btn-neutral mt-4 bg-primary rounded-full">Add
+                            Money</button>
                     </fieldset>
                 </div>
             </div>
@@ -137,9 +144,6 @@
         </div>
     </div>
 
-    <!-- <script src="./scripts/cashout.js"></script>
-    <script src="./scripts/machine.js"></script>
-    <script src="./scripts/addmoney.js"></script> -->
 </body>
 
 </html>
