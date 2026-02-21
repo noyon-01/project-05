@@ -25,6 +25,9 @@ function showOnly(id) {
   const transfer = document.getElementById("transfer_money");
   transfer.classList.add("hidden");
 
+  const bonus = document.getElementById("get_bonus");
+  bonus.classList.add("hidden");
+
   const transactions = document.getElementById("transactions");
   transactions.classList.add("hidden");
 
