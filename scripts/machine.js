@@ -28,6 +28,9 @@ function showOnly(id) {
   const bonus = document.getElementById("get_bonus");
   bonus.classList.add("hidden");
 
+  const pay = document.getElementById("pay_money");
+  pay.classList.add("hidden");
+
   const transactions = document.getElementById("transactions");
   transactions.classList.add("hidden");
 

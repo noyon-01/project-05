@@ -61,15 +61,17 @@
                 <img src="./assets/opt-2.png" alt="">
                 <p>Cashout</p>
             </button>
-            <button onclick="showOnly('transfer_money')" class="btn btn-primary btn-soft flex-col h-full py-3 px-3 rounded-2xl">
+            <button onclick="showOnly('transfer_money')"
+                class="btn btn-primary btn-soft flex-col h-full py-3 px-3 rounded-2xl">
                 <img src="./assets/opt-3.png" alt="">
                 <p>Transfer Money</p>
             </button>
-            <button onclick="showOnly('get_bonus')" class="btn btn-primary btn-soft flex-col h-full py-3 px-3 rounded-2xl">
+            <button onclick="showOnly('get_bonus')"
+                class="btn btn-primary btn-soft flex-col h-full py-3 px-3 rounded-2xl">
                 <img src="./assets/opt-4.png" alt="">
                 <p>Get Bonus</p>
             </button>
-            <button class="btn btn-primary btn-soft flex-col h-full py-3 px-3 rounded-2xl">
+            <button onclick="showOnly('pay_money')" class="btn btn-primary btn-soft flex-col h-full py-3 px-3 rounded-2xl">
                 <img src="./assets/opt-5.png" alt="">
                 <p>Pay Bill</p>
             </button>
@@ -108,7 +110,6 @@
         <h2 class="text-2xl font-bold">Add Money</h2>
         <div id="form_section" class="pt-5">
             <div class="card bg-base-100 w-full max-w-lg shadow mx-auto rounded-3xl">
-
                 <div class="card-body">
                     <fieldset class="fieldset">
                         <label class="text-neutral font-bold">Select A Bank</label>
@@ -149,9 +150,10 @@
                         <input id="transfer_amount" type="text" minlength="11" maxlength="11"
                             class="input rounded-full bg-base-200 mt-1 w-full" placeholder="Enter amount to transfer" />
                         <label class="label text-neutral font-bold mt-3">Pin Number</label>
-                        <input id="transfer_pin_number" type="password" class="input rounded-full bg-base-200 mt-1 w-full"
-                            placeholder="Enter 4 digit pin number" />
-                        <button id="transfer_send_btn" class="btn btn-neutral mt-4 bg-primary rounded-full">Send Now</button>
+                        <input id="transfer_pin_number" type="password"
+                            class="input rounded-full bg-base-200 mt-1 w-full" placeholder="Enter 4 digit pin number" />
+                        <button id="transfer_send_btn" class="btn btn-neutral mt-4 bg-primary rounded-full">Send
+                            Now</button>
                     </fieldset>
                 </div>
             </div>
@@ -167,7 +169,37 @@
                         <label class="label text-neutral font-bold mt-3">Enter Bonus Coupon</label>
                         <input id="bonus_coupon" type="text" class="input rounded-full bg-base-200 mt-1 w-full"
                             placeholder="Enter your coupon" />
-                        <button id="get_bonus_btn" class="btn btn-neutral mt-4 bg-primary rounded-full">Get Bonus</button>
+                        <button id="get_bonus_btn" class="btn btn-neutral mt-4 bg-primary rounded-full">Get
+                            Bonus</button>
+                    </fieldset>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="pay_money" class="w-11/12 mx-auto mt-6 mb-10 hidden">
+        <h2 class="text-2xl font-bold">Pay Bill</h2>
+        <div id="form_section" class="pt-5">
+            <div class="card bg-base-100 w-full max-w-lg shadow mx-auto rounded-3xl">
+                <div class="card-body">
+                    <fieldset class="fieldset">
+                        <label class="text-neutral font-bold">Select To Pay</label>
+                        <select id="pay_money_bank" class="select rounded-full w-full">
+                            <option disabled selected>Select bank</option>
+                            <option>BCCL</option>
+                            <option>DBBL</option>
+                            <option>City</option>
+                        </select>
+                        <label class="label text-neutral font-bold mt-3">Biller Account Number</label>
+                        <input id="pay_momey_number" type="text" class="input rounded-full bg-base-200 mt-1 w-full"
+                            placeholder="Enter account number" />
+                        <label class="label text-neutral font-bold mt-3">Amount to Pay</label>
+                        <input id="pay_money_amount" type="text" minlength="11" maxlength="11"
+                            class="input rounded-full bg-base-200 mt-1 w-full" placeholder="Add Amount to pay" />
+                        <label class="label text-neutral font-bold mt-3">Pin Number</label>
+                        <input id="pay_money_pin" type="password" class="input rounded-full bg-base-200 mt-1 w-full"
+                            placeholder="Enter 4 digit pin number" />
+                        <button id="pay_money_btn" class="btn btn-neutral mt-4 bg-primary rounded-full">Pay Now</button>
                     </fieldset>
                 </div>
             </div>
@@ -180,11 +212,12 @@
         </div>
     </div>
 
-     <script src="./scripts/cashout.js"></script>
+    <script src="./scripts/cashout.js"></script>
     <script src="./scripts/machine.js"></script>
     <script src="./scripts/addmoney.js"></script>
     <script src="./scripts/transfer.js"></script>
     <script src="./scripts/bonus.js"></script>
+    <script src="./scripts/pay.js"></script>
 </body>
 
 </html>
