@@ -17,7 +17,7 @@ document.getElementById("add_money_btn").addEventListener("click", function () {
 
   const pin = getValueFormInput("add_money_pin");
   if (pin === "1234") {
-    alert("Add Money is Successfully Done");
+    alert("Add Money is Successfully Completed.");
     setBalance(newBalance);
 
     // !Transaction Section Starts Here! //
@@ -25,7 +25,7 @@ document.getElementById("add_money_btn").addEventListener("click", function () {
     const newHistory = document.createElement("div");
     newHistory.innerHTML = `
     <div id="transactions_card" class="p-5 bg-base-100 rounded-2xl shadow">
-                <h1 class="text-2xl font-bold mb-2">Add Money</h1>
+                <h1 class="text-1xl font-bold mb-2">Add Money</h1>
                 <p>Add Money ${addAmount} Taka Form ${bank} Bank, Account No: ${accNumber}, on ${new Date()}</p>
     </div>`;
     history.appendChild(newHistory);

@@ -61,7 +61,7 @@
                 <img src="./assets/opt-2.png" alt="">
                 <p>Cashout</p>
             </button>
-            <button class="btn btn-primary btn-soft flex-col h-full py-3 px-3 rounded-2xl">
+            <button onclick="showOnly('transfer_money')" class="btn btn-primary btn-soft flex-col h-full py-3 px-3 rounded-2xl">
                 <img src="./assets/opt-3.png" alt="">
                 <p>Transfer Money</p>
             </button>
@@ -135,7 +135,32 @@
         </div>
     </div>
 
-    <div id="transactions" class="w-11/12 mx-auto hidden">
+    <div id="transfer_money" class="w-11/12 mx-auto mt-6 mb-10 hidden">
+        <h2 class="text-2xl font-bold">Transfer Money</h2>
+        <div id="form_section" class="pt-5">
+            <div class="card bg-base-100 w-full max-w-lg shadow mx-auto rounded-3xl">
+
+                <div class="card-body">
+                    <fieldset class="fieldset">
+                        <label class="label text-neutral font-bold mt-3">User Account Number</label>
+                        <input id="transfer_acc_number" type="text" class="input rounded-full bg-base-200 mt-1 w-full"
+                            placeholder="Enter 11 digit number" />
+                        <label class="label text-neutral font-bold mt-3">Amount</label>
+                        <input id="transfer_amount" type="text" minlength="11" maxlength="11"
+                            class="input rounded-full bg-base-200 mt-1 w-full" placeholder="Enter amount to transfer" />
+                        <label class="label text-neutral font-bold mt-3">Pin Number</label>
+                        <input id="transfer_pin_number" type="password" class="input rounded-full bg-base-200 mt-1 w-full"
+                            placeholder="Enter 4 digit pin number" />
+                        <button id="transfer_send_btn" class="btn btn-neutral mt-4 bg-primary rounded-full">Send Now</button>
+                    </fieldset>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+
+    <div id="transactions" class="w-11/12 mx-auto mt-6 hidden">
         <h2 class="text-2xl font-bold mb-5">Transactions</h2>
         <div id="transaction_history_container" class="space-y-5 mb-10">
         </div>
@@ -144,6 +169,7 @@
      <script src="./scripts/cashout.js"></script>
     <script src="./scripts/machine.js"></script>
     <script src="./scripts/addmoney.js"></script>
+    <script src="./scripts/transfer.js"></script>
 </body>
 
 </html>

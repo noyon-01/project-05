@@ -22,6 +22,9 @@ function showOnly(id) {
   const cashout = document.getElementById("cashout");
   cashout.classList.add("hidden");
 
+  const transfer = document.getElementById("transfer_money");
+  transfer.classList.add("hidden");
+
   const transactions = document.getElementById("transactions");
   transactions.classList.add("hidden");
 

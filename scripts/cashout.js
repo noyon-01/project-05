@@ -15,7 +15,7 @@ document.getElementById("cashout_btn").addEventListener("click", function () {
 
   const cashoutPin = getValueFormInput("cashout_pin");
   if (cashoutPin === "1234") {
-    alert("Cashout is Successfully Done.");
+    alert("Cashout is Successfully Completed.");
     setBalance(newBalance);
 
     // !Transaction Section Starts Here! //
@@ -23,7 +23,7 @@ document.getElementById("cashout_btn").addEventListener("click", function () {
     const newHistory = document.createElement("div");
     newHistory.innerHTML = `
     <div id="transactions_card" class="p-5 bg-base-100 rounded-2xl shadow">
-                <h1 class="text-2xl font-bold mb-2">Cashout</h1>
+                <h1 class="text-1xl font-bold mb-2">Cashout</h1>
                 <p>Cashout ${cashoutAmount} Taka Form Agent No: ${cashoutNumber}, on ${new Date()}</p>
     </div>`;
     history.appendChild(newHistory);
